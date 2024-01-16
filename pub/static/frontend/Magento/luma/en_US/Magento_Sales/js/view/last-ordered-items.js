@@ -1,0 +1,1 @@
+/Users/bssgroup/Desktop/Hoc/hoc_magento/vendor/magento/module-sales/view/frontend/web/js/view/last-ordered-items.js

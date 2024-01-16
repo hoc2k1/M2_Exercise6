@@ -1,0 +1,1 @@
+/Users/bssgroup/Desktop/Hoc/hoc_magento/lib/web/jquery/fileUploader/vendor/blueimp-canvas-to-blob/js/canvas-to-blob.js

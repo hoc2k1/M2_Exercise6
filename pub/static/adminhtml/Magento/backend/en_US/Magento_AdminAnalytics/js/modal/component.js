@@ -1,0 +1,1 @@
+/Users/bssgroup/Desktop/Hoc/hoc_magento/vendor/magento/module-admin-analytics/view/adminhtml/web/js/modal/component.js

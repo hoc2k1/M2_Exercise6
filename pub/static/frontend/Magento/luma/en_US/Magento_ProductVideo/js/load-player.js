@@ -1,0 +1,1 @@
+/Users/bssgroup/Desktop/Hoc/hoc_magento/vendor/magento/module-product-video/view/frontend/web/js/load-player.js

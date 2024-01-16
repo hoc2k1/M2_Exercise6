@@ -1,0 +1,1 @@
+/Users/bssgroup/Desktop/Hoc/hoc_magento/vendor/magento/module-newsletter/view/frontend/web/js/newsletter-sign-up.js
