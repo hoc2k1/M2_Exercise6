@@ -6,30 +6,70 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/theme_styles.css" />
+    </head>
+
     <body>
-        <referenceContainer name="header.panel">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
-        <referenceContainer name="footer">
-            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
-        </referenceContainer>
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
+
+        <!-- chinh sua header -->
         <referenceBlock name="header.links">
+            <!-- xoa text Default welcome msg! -->
             <referenceBlock name="header" remove="true">
                 <arguments>
                     <argument name="show_part" xsi:type="string">welcome</argument>
                 </arguments>
             </referenceBlock>
-            <block class="Bss\HelloWorld\Block\CustomLink" name="custom-link" before="-" template="Magento_Theme::html/customlink.phtml">
+            <!-- end xoa text Default welcome msg! -->
+
+            <!-- them custom link -->
+            <block class="Bss\HelloWorld\Block\CustomLink" name="custom-link" before="-" template="Magento_Theme::html/custom_link.phtml">
                 <arguments>
                     <argument name="custom-link" xsi:type="string">Custom link</argument>
                 </arguments>
             </block>
+            <!-- end them custom link -->
         </referenceBlock>
+        <!-- end chinh sua header -->
+
+        <!-- chinh sua footer -->
+        <!-- them block 1 -->
+        <referenceContainer name="page.bottom">
+            <block class="Magento\Cms\Block\Block" name="block_1" template="Bss_HelloWorld::html\static_block.phtml">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">block-1</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <!-- end them block 1 -->
+
+        <referenceContainer name="footer">
+            <!-- chinh sua block 2 -->
+            <referenceBlock class="Magento\Cms\Block\Block" name="footer_links" template="Bss_HelloWorld::html\static_block.phtml">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">block-2</argument>
+                </arguments>
+            </referenceBlock>
+            <!-- end chinh sua block 2 -->
+
+            <!-- them block 5 -->
+            <container name="footer_bottom" htmlTag="div" htmlClass="footer_bottom" >
+                <block class="Magento\Cms\Block\Block" name="block_5" template="Bss_HelloWorld::html\static_block.phtml">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">block-5</argument>
+                    </arguments>
+                </block>
+            </container>
+            <!-- end them block 5 -->
+        </referenceContainer>
+        <!-- end chinh sua footer -->
     </body>
+
+    <!-- di chuyen copyright vao footer_bottom -->
+        <move element="copyright" destination="footer_bottom" as="block_4" before="-"/>
+    <!-- <referenceBlock name="copyright" remove="true"></referenceBlock> -->
+
+    <!-- end di chuyen copyright vao footer_bottom -->
 </page>

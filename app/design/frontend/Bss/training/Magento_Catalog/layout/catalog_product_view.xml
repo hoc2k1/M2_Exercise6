@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/product_detail_styles.css" />
+    </head>
+    <body>
+        <!-- xoa sku -->
+        <referenceContainer name="product.info.stock.sku" remove="true"></referenceContainer>
+        <!-- end -->
+        
+        <!-- chuyen qty len cung hang price -->
+        <move element="product.info" destination="product.info.price" after="-"></move>
+        <!-- end -->
+        <!-- chuyen descrition duoi price -->
+        <move element="product.info.details" destination="product.info.main" after="product.info.price"></move>
+        <!-- end -->
+        <!-- chuyen related product sang ben trai -->
+        <move element="content.aside" destination="product.info.media" after="-"></move>
+        <!-- end -->
+    </body>
+</page>

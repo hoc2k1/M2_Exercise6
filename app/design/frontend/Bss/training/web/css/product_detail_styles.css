@@ -1,0 +1,32 @@
+.product-info-main .product-info-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.fieldset {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+.fieldset > .field {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.fieldset > .field > .label {
+    margin-bottom: 0px;
+    margin-right: 10px;
+}
+
+.box-tocart .action.tocart {
+    width: 100% !important;
+    line-height: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
