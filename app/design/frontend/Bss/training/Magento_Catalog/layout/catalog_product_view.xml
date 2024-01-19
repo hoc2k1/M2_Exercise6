@@ -23,5 +23,24 @@
         <!-- chuyen related product sang ben trai -->
         <move element="content.aside" destination="product.info.media" after="-"></move>
         <!-- end -->
+
+        <!-- them tab -->
+        <referenceBlock name="product.info.details">                
+            <block class="Magento\Catalog\Block\Product\View\Description" name="custom-tab" template="Magento_Catalog::product/view/custom_tab.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Custom tab</argument>
+                </arguments>
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.contact-for-sale-price" template="Magento_Catalog::product/view/contact_for_sale_price.phtml"/>
+            </block>
+        </referenceBlock>
+        <!-- end them tab -->
+
+        <referenceContainer name="content.aside">
+            <block class="Magento\Cms\Block\Block" name="custom-product-listing" template="Bss_HelloWorld::product\view\static_block.phtml" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">custom-product-listing</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>

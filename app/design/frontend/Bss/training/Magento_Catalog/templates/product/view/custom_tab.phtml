@@ -1,0 +1,8 @@
+<?php
+$_attributeAddAttribute = $block->getAddAttribute();
+?>
+ 
+<div class="custom-tab" <?php  echo $_attributeAddAttribute;?>>
+    <p style="padding-top: 10px; padding-right: 10px;">Custom tab</p>
+    <?= $block->getBlockHtml("product.info.contact-for-sale-price"); ?>
+</div>
